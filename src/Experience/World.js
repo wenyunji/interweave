@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import Experience from './Experience.js'
 import Interweave from './interweave.js'
+import Line from './line.js'
 export default class World {
     constructor(_options) {
         this.experience = new Experience()
@@ -10,22 +11,32 @@ export default class World {
 
         this.resources.on('groupEnd', (_group) => {
             if (_group.name === 'base') {
-                this.setDummy()
+                // this.setDummy()
+                this.seLine()
             }
         })
     }
 
     setDummy() {
-        this.Interweave = new Interweave()      
+        this.Interweave = new Interweave()
     }
 
-    resize() {}
+    seLine() {
+        this.Line = new Line()
+    }
+
+    resize() { }
 
     update() {
         if (this.Interweave) {
             this.Interweave.update()
         }
+
+        if (this.Line) {
+            this.Line.update()
+        }
+
     }
 
-    destroy() {}
+    destroy() { }
 }

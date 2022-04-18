@@ -29,6 +29,7 @@
     "mini-css-extract-plugin": "^2.6.0",
     "portfinder-sync": "^0.0.2",
     "raw-loader": "^4.0.2",
+    "simplex-noise": "^3.0.1",
     "stats.js": "^0.17.0",
     "style-loader": "^3.3.0",
     "three": "^0.132.2",
